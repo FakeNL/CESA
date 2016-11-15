@@ -1,0 +1,111 @@
+#chartdiv {
+  height: 500px;
+  width: 100%;
+}
+
+.map-marker {
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+.map-marker.map-clickable {
+    cursor: pointer;
+}
+
+.pulse {
+  width: 15px;
+  height: 15px;
+  border: 5px solid #f7ef12;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  z-index: 10;
+  position: absolute;
+  border: 2px solid #3375a0;
+  background: #ff0;
+  }
+.map-marker .dot {
+    border: 12px solid #fff601;
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: pulse 3s ease-out;
+    -moz-animation: pulse 3s ease-out;
+    animation: pulse 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    z-index: 1;
+    opacity: 0;
+  }
+  @-moz-keyframes pulse {
+   0% {
+      -moz-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -moz-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -moz-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -moz-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -moz-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+  @-webkit-keyframes "pulse" {
+   0% {
+      -webkit-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -webkit-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -webkit-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -webkit-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -webkit-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+
+.tweet {
+  background: #fff;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+
+  img {
+    width: 50px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+  }
+}
+
+.map-marker {
+    cursor: pointer;
+}

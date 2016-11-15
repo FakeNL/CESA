@@ -1,0 +1,58 @@
+.items {
+    margin-top: 20px;
+}
+
+.item {
+    padding: 20px;
+    width: 250px;
+    height: 120px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s all;
+    float: left;
+    display: block;
+    position: relative;
+    color: #333;
+
+    &:last-child { margin-right: 0; }
+
+    &:hover { color: #333; }
+
+    &.map { background: rgba(77, 195, 220, 0.3); }
+    &.files{ background: rgba(77, 220, 175, 0.3); }
+    &.download { background: rgba(219, 101, 115, 0.3); }
+
+    &.map:hover { background: rgba(77, 195, 220, 0.5); }
+    &.files:hover { background: rgba(77, 220, 175, 0.5); }
+    &.download:hover { background:rgba(219, 101, 115, 0.5); }
+
+    h2 {
+        font-size: 13px;
+        text-transform: uppercase;
+        font-family: 'Rubik', sans-serif;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        left: 10px;
+    }
+
+    img {
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        opacity: 0.6;
+    }
+
+    &.map img { top: 25px; right: 50px; width: 40px; }
+    &.files img { top: 29px; right: 21px; width: 60px; }
+    &.download img { top: 35px; right: 25px; width: 70px; }
+}
+
+.others {
+    margin-top: 20px;
+    p { margin-bottom: 0 }
+    a {  display: inline-block; margin-top: 20px; }
+}

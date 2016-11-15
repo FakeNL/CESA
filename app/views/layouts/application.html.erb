@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Copyright Evidence Scientific Articles | EUHackaton 2016</title>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag "https://www.amcharts.com/lib/3/plugins/export/export.css" %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Rubik" %>
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+
+    <%= javascript_include_tag "https://www.amcharts.com/lib/3/ammap.js" %>
+    <%= javascript_include_tag "https://www.amcharts.com/lib/3/maps/js/worldLow.js" %>
+    <%= javascript_include_tag "https://www.amcharts.com/lib/3/pie.js" %>
+    <%= javascript_include_tag "https://www.amcharts.com/lib/3/plugins/export/export.min.js" %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

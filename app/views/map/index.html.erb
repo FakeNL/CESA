@@ -1,0 +1,25 @@
+<%= render "shared/twitter" %>
+
+<header>
+  <div class="header-content">
+    <h1 class="small"></h1>
+
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a class="active" href="#">MAP OF REQUESTS</a></li>
+      <li><a href="/request-articles">REQUESTED ARTICLES</a></li>
+      <li><a href="/downloads">DOWNLOADS</a></li>
+      <li><a class="last" href="/credits">CREDITS</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="map" role="main">
+  <h2>Map of requests</h2>
+  <div id="chartdiv"></div>
+
+  <div class="tweet">
+    <%= image_tag('twitter.png'); %>
+    <span class="tweet-target">Little favour gesture tweeps: Tomasello &amp; Camaioni 1997<br>A comparison of the gestural communication of apes and human infants <a href="https://twitter.com/search?src=typd&q=%23icanhazpdf">#icanhazpdf</a></span>
+  </div>
+</main>
