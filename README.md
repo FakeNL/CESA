@@ -1,24 +1,18 @@
-# README
+### CESA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Running
+Clone the project
+`git clone git@github.com:FakeNL/CESA.git`
 
-Things you may want to cover:
+Install bundler
+`gem install bundler`
 
-* Ruby version
+Install rails
+`gem install rails`
 
-* System dependencies
+Run migrations
+`rake db:migration`
 
-* Configuration
+`Run the project`
+`rails s`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
