@@ -14,7 +14,7 @@ Run migrations:<br>
 `bin/rake db:migration`
 
 Install dependencies:<br>
-`bundle install`
+`bin/bundle install`
 
 Run the project:<br>
 `bin/rails s`
