@@ -7,4 +7,5 @@ Rails.application.routes.draw do
     get '/requested-articles', to: 'file#index'
     get '/credits', to: 'credit#index'
     get '/downloads', to: 'download#index'
+    get '//downloaded-articles', to: 'downloaded#index'
 end

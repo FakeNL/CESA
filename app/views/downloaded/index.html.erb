@@ -1,0 +1,33 @@
+<%= render "shared/scihub" %>
+
+<header>
+  <div class="header-content">
+    <a href="/"><h1 class="small"></h1></a>
+
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/map">MAP OF REQUESTS</a></li>
+      <li><a href="/requested-articles">REQUESTED ARTICLES</a></li>
+      <li><a class="active" href="#">DOWNLOADED ARTICLES</a></li>
+      <li><a href="/downloads">DOWNLOADS</a></li>
+      <li><a class="last" href="/credits">CREDITS</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="files" role="main">
+  <div class="publisher">
+    <h2>Most requested publishers</h2>
+    <div id="piechart"></div>
+  </div>
+
+  <div class="clear" style="text-align: center; margin-bottom: 80px;">
+    <%= image_tag 'crossbones.png', size: '50x50' %>
+  </div>
+
+  <div style="text-align: right; margin-top: 20px;">
+    <span style=" font-size: 11px;">Dataset source: Sci-Hub</span>
+  </div>
+</main>
+
+

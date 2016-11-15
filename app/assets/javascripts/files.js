@@ -47,6 +47,10 @@ if(typeof redditData !== 'undefined') {
   var publicationsByYear = [{"year":1910,"value":2},{"year":1918,"value":1},{"year":1924,"value":1},{"year":1928,"value":1},{"year":1929,"value":1},{"year":1937,"value":1},{"year":1941,"value":1},{"year":1944,"value":1},{"year":1951,"value":1},{"year":1956,"value":1},{"year":1962,"value":1},{"year":1963,"value":1},{"year":1966,"value":2},{"year":1967,"value":1},{"year":1970,"value":2},{"year":1973,"value":2},{"year":1974,"value":1},{"year":1977,"value":1},{"year":1979,"value":2},{"year":1983,"value":1},{"year":1984,"value":2},{"year":1985,"value":1},{"year":1986,"value":3},{"year":1987,"value":2},{"year":1989,"value":1},{"year":1990,"value":1},{"year":1991,"value":2},{"year":1992,"value":3},{"year":1993,"value":2},{"year":1994,"value":2},{"year":1995,"value":1},{"year":1996,"value":3},{"year":1997,"value":4},{"year":1998,"value":3},{"year":2000,"value":2},{"year":2001,"value":2},{"year":2002,"value":8},{"year":2003,"value":6},{"year":2004,"value":3},{"year":2005,"value":4},{"year":2006,"value":2},{"year":2007,"value":3},{"year":2008,"value":10},{"year":2009,"value":8},{"year":2010,"value":19},{"year":2011,"value":37},{"year":2012,"value":48},{"year":2013,"value":42},{"year":2014,"value":44},{"year":2015,"value":47},{"year":2016,"value":56},{"year":2017,"value":1}];
 
   var piechart = AmCharts.makeChart( "piechart", {
+    "legend":{
+      "position":"bottom",
+      "autoMargins": false
+    },
     "type": "pie",
     "theme": "light",
     "dataProvider": topPublishers,
