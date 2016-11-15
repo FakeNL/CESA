@@ -11,8 +11,11 @@ Install rails:<br>
 `gem install rails`
 
 Run migrations:<br>
-`rake db:migration`
+`bin/rake db:migration`
+
+Install dependencies:<br>
+`bundle install`
 
 Run the project:<br>
-`rails s`
+`bin/rails s`
 
