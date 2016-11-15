@@ -1,4 +1,19 @@
 .files-half {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+
+  &.last {
+    margin: 0;
+  }
+
+  li { list-style-type: decimal; font-size: 16px; padding: 4px; margin-bottom: 8px; color: #666; transition: 0.4s all }
+  li:hover { background: white; color: black }
+  ul { margin-top: 0; padding-top: 0; }
+
+  h2 {
+    margin-bottom: 20px !important;
+  }
 }
 
 #piechart {
