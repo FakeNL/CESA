@@ -15,13 +15,22 @@
 </header>
 
 <main class="files" role="main">
-  <div class="files-half">
+  <div class="publisher">
     <h2>Most requested publishers</h2>
     <div id="piechart"></div>
   </div>
 
+  <div class="clear" style="text-align: center; margin-bottom: 80px;">
+    <%= image_tag 'crossbones.png', size: '50x50' %>
+  </div>
+
+  <div class="files-half">
+    <h2>Distribution of number of citations</h2>
+  </div>
+
   <div class="files-half last">
-    <h2>Most requested publishers</h2>
+    <h2>Top 10 most requested articles</h2>
+    <ul class="target-articles"></ul>
   </div>
 
   <div class="clear"></div>
