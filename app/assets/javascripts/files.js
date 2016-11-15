@@ -4,7 +4,7 @@ if(typeof redditData !== 'undefined') {
    * For presentation purposes we mocked all the data, but all of this is inside
    * `app/views/shared/reddit.html.erb`
    */
-var topArticles = ["Words of the ancestors: disembodied knowledge and secrecy in East Timor", "Knowledge management, research data management, and university scholarship", "Prenylamine. Autoradiographic and neuropathological studies on myocardial mechanisms of action", "Numbers, Please!", "Game Mastering in Collaborative Serious Games:", "Robotic facelift thyroidectomy: II. Clinical feasibility and safety", "Problem Neck, Hyoid Bone, and Submental Myotomy", "Comparing Evaluation Protocols on the KTH Dataset", "Research on Resource Allocation Algorithm Based on Effective Capacity for Downlink Multi-service OFDMA Systems", "Global Issues of Pastoral Counseling"]
+  var topArticles = ["Words of the ancestors: disembodied knowledge and secrecy in East Timor", "Knowledge management, research data management, and university scholarship", "Prenylamine. Autoradiographic and neuropathological studies on myocardial mechanisms of action", "Numbers, Please!", "Game Mastering in Collaborative Serious Games:", "Robotic facelift thyroidectomy: II. Clinical feasibility and safety", "Problem Neck, Hyoid Bone, and Submental Myotomy", "Comparing Evaluation Protocols on the KTH Dataset", "Research on Resource Allocation Algorithm Based on Effective Capacity for Downlink Multi-service OFDMA Systems", "Global Issues of Pastoral Counseling"]
 
   var topPublishers = [
     {
@@ -44,7 +44,9 @@ var topArticles = ["Words of the ancestors: disembodied knowledge and secrecy in
     }
   ];
 
-  var chart = AmCharts.makeChart( "piechart", {
+  var publicationsByYear = [{"year":1910,"value":2},{"year":1918,"value":1},{"year":1924,"value":1},{"year":1928,"value":1},{"year":1929,"value":1},{"year":1937,"value":1},{"year":1941,"value":1},{"year":1944,"value":1},{"year":1951,"value":1},{"year":1956,"value":1},{"year":1962,"value":1},{"year":1963,"value":1},{"year":1966,"value":2},{"year":1967,"value":1},{"year":1970,"value":2},{"year":1973,"value":2},{"year":1974,"value":1},{"year":1977,"value":1},{"year":1979,"value":2},{"year":1983,"value":1},{"year":1984,"value":2},{"year":1985,"value":1},{"year":1986,"value":3},{"year":1987,"value":2},{"year":1989,"value":1},{"year":1990,"value":1},{"year":1991,"value":2},{"year":1992,"value":3},{"year":1993,"value":2},{"year":1994,"value":2},{"year":1995,"value":1},{"year":1996,"value":3},{"year":1997,"value":4},{"year":1998,"value":3},{"year":2000,"value":2},{"year":2001,"value":2},{"year":2002,"value":8},{"year":2003,"value":6},{"year":2004,"value":3},{"year":2005,"value":4},{"year":2006,"value":2},{"year":2007,"value":3},{"year":2008,"value":10},{"year":2009,"value":8},{"year":2010,"value":19},{"year":2011,"value":37},{"year":2012,"value":48},{"year":2013,"value":42},{"year":2014,"value":44},{"year":2015,"value":47},{"year":2016,"value":56},{"year":2017,"value":1}];
+
+  var piechart = AmCharts.makeChart( "piechart", {
     "type": "pie",
     "theme": "light",
     "dataProvider": topPublishers,
@@ -61,6 +63,126 @@ var topArticles = ["Words of the ancestors: disembodied knowledge and secrecy in
       "enabled": false
     }
   } );
+
+  var barChart = AmCharts.makeChart( "barchart", {
+    "type": "serial",
+    "theme": "light",
+    // country, visits
+    "dataProvider": [{"range":"0-20","value":168},{"range":"20-40","value":117},{"range":"40-60","value":67},{"range":"60-80","value":27},{"range":"80-100","value":7},{"range":"100-120","value":5},{"range":"120-140","value":2},{"range":"140-160","value":1},{"range":"160-180","value":2},{"range":"180-200","value":1}],
+    "gridAboveGraphs": true,
+    "startDuration": 1,
+    "graphs": [ {
+      "balloonText": "Range between [[category]]: <b>[[value]]</b>",
+      "fillAlphas": 0.8,
+      "fillColors": '#2dbf60',
+      "lineAlpha": 0.2,
+      "type": "column",
+      "valueField": "value"
+    } ],
+    "chartCursor": {
+      "categoryBalloonEnabled": false,
+      "cursorAlpha": 0,
+      "zoomable": false
+    },
+    "categoryField": "range",
+    "categoryAxis": {
+      "gridPosition": "start",
+      "gridAlpha": 0,
+      "tickPosition": "start",
+      "tickLength": 20
+    },
+    "export": {
+      "enabled": false
+    }
+  } );
+
+  var yearChart = AmCharts.makeChart("linechart", {
+    "type": "serial",
+    "theme": "light",
+    "marginRight": 40,
+    "marginLeft": 40,
+    "autoMarginOffset": 20,
+    "mouseWheelZoomEnabled":true,
+    "dataDateFormat": "YYYY",
+    "valueAxes": [{
+        "id": "v1",
+        "axisAlpha": 0,
+        "position": "left",
+        "ignoreAxisWidth":true
+    }],
+    "balloon": {
+        "borderThickness": 1,
+        "shadowAlpha": 0
+    },
+    "graphs": [{
+        "id": "g1",
+        "balloon":{
+          "drop":true,
+          "adjustBorderColor":false,
+          "color":"#ffffff"
+        },
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "color": "#2dbf60",
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "lineColor": '#2dbf60',
+        "title": "red line",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value",
+        "balloonText": "<span style='font-size:18px;'>[[value]]</span>"
+    }],
+    "chartScrollbar": {
+        "graph": "g1",
+        "oppositeAxis":false,
+        "offset":30,
+        "scrollbarHeight": 80,
+        "backgroundAlpha": 0,
+        "selectedBackgroundAlpha": 0.1,
+        "selectedBackgroundColor": "#2dbf60",
+        "graphFillAlpha": 0,
+        "graphLineAlpha": 0.5,
+        "selectedGraphFillAlpha": 0,
+        "selectedGraphLineAlpha": 1,
+        "autoGridCount":true,
+        "color":"#AAAAAA"
+    },
+    "chartCursor": {
+        "pan": true,
+        "valueLineEnabled": true,
+        "valueLineBalloonEnabled": true,
+        "cursorAlpha":1,
+        "cursorColor":"#2dbf60",
+        "limitToGraph":"g1",
+        "valueLineAlpha":0.2,
+        "valueZoomable":true
+    },
+    "valueScrollbar":{
+      "oppositeAxis":false,
+      "offset":50,
+      "scrollbarHeight":10
+    },
+    "categoryField": "year",
+    "categoryAxis": {
+        "parseDates": true,
+        "dashLength": 1,
+        "minorGridEnabled": true
+    },
+    "export": {
+        "enabled": false
+    },
+    "dataProvider": publicationsByYear
+});
+
+yearChart.addListener("rendered", zoomChart);
+
+zoomChart();
+
+function zoomChart() {
+    yearChart.zoomToIndexes(yearChart.dataProvider.length - 40, yearChart.dataProvider.length - 1);
+}
 
   var generatetop10 = function(){
     var lis = '';
