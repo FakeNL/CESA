@@ -44,6 +44,9 @@ if(typeof redditData !== 'undefined') {
     "valueField": "requests",
     "colorField": "color",
     "titleField": "publisher",
+    "outlineAlpha": 0.4,
+    "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+    "depth3D": 15,
     "balloon":{
       "fixedPosition": false
     },
