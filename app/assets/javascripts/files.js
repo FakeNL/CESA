@@ -1,4 +1,4 @@
-if(redditData) {
+if(typeof redditData !== 'undefined') {
   var topPublishers = [
     {
       publisher: 'Wiley-Blackwell',
@@ -56,6 +56,3 @@ if(redditData) {
     $('.amcharts-chart-div a').remove();
   });
 }
-
-
-
