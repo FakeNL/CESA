@@ -1,18 +1,18 @@
 ### CESA
 
 #### Running
-Clone the project
+Clone the project:<br>
 `git clone git@github.com:FakeNL/CESA.git`
 
-Install bundler
+Install bundler:<br>
 `gem install bundler`
 
-Install rails
+Install rails:<br>
 `gem install rails`
 
-Run migrations
+Run migrations:<br>
 `rake db:migration`
 
-`Run the project`
+Run the project:<br>
 `rails s`
 
