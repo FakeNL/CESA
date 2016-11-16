@@ -3,8 +3,8 @@
 }
 
 .item {
-    padding: 20px;
-    width: 250px;
+    padding: 14px;
+    width: 220px;
     height: 120px;
     margin-right: 20px;
     cursor: pointer;
@@ -30,25 +30,17 @@
         font-size: 13px;
         text-transform: uppercase;
         font-family: 'Rubik', sans-serif;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        left: 10px;
+				display: block;
+				text-align: center;
+				margin-top: 12px;
     }
 
     img {
-        width: 100px;
+				height: 70px;
         margin: 0 auto;
         display: block;
-        position: absolute;
-        top: 8px;
-        right: 20px;
         opacity: 0.6;
     }
-
-    &.map img { top: 25px; right: 45px; width: 48px; }
-    &.files img { top: 29px; right: 21px; width: 60px; }
-    &.download img { top: 35px; right: 25px; width: 70px; }
 }
 
 .others {
