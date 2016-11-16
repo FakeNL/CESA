@@ -15,14 +15,10 @@
   </div>
 </header>
 
-<main class="files" role="main">
-  <div class="publisher">
-    <h2>Most requested publishers</h2>
-    <div id="piechart"></div>
-  </div>
-
-  <div class="clear" style="text-align: center; margin-bottom: 80px;">
-    <%= image_tag 'crossbones.png', size: '50x50' %>
+<main class="downloaded" role="main">
+  <div>
+    <h2>Most downloaded categories</h2>
+    <div id="piechart-downloaded"></div>
   </div>
 
   <div style="text-align: right; margin-top: 20px;">
@@ -30,4 +26,11 @@
   </div>
 </main>
 
-
+<!-- fixing conflicts between charts -->
+<!-- sorry we dont have time to refactor it -->
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/amcharts.js" %>
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/ammap.js" %>
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/maps/js/worldLow.js" %>
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/pie.js" %>
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/serial.js" %>
+<%= javascript_include_tag "https://www.amcharts.com/lib/3/plugins/export/export.min.js" %>
